@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Media Queries</title>
+    <style>
+      /*@font-face*/
+      @keyframes switchcolor {
+        from { background-color: red; }
+        to { background-color: yellow; }
+      }
+      @keyframes switchcolor2 {
+        from {background-color: green;
+        width: 500px;}
+        to {background-color: violet;
+        width: 200px;}
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        animation-name: switchcolor2;
+        animation-duration: 5s;
+      }
+      @media screen and (max-width: 1280px) {
+        body {
+          background-color: red;
+          color: white;
+          animation-name: switchcolor;
+          animation-duration: 5s;
+        }
+        li {
+          display: inline;
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        body {
+          background-color: orange;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        body {
+          background-color: yellow;
+        }
+        li {
+          display: block;
+        }
+      }
+      @media screen and (max-width: 640px) {
+        body {
+          background-color: green;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        body {
+          background-color: blue;
+        }
+      }
+      @media screen and (max-width: 360px) {
+        body {
+          background-color: indigo;
+        }
+      }
+      @media screen and (max-width: 240px) {
+        body {
+          background-color: violet;
+        }
+      }
+      /* print - kindle */
+      /* projection */
+      /* handheld - iphone */
+      /*all*/
+      /*braille*/
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <nav>
+      <ul class="navbar">
+        <li><a href="#">Home</a></li> |
+        <li><a href="#">About</a></li> |
+        <li><a href="#">Portfolio</a></li> |
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
